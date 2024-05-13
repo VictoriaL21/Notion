@@ -1,0 +1,6 @@
+<a href="https://time.is/Paris" id="time_is_link" rel="nofollow" style="font-size:36px;color:d3a2d7">Heure à Paris :</a>
+<span id="Paris_z71f" style="font-size:36px;color:d3a2d7"></span>
+<script src="//widget.time.is/fr.js"></script>
+<script>
+time_is_widget.init({Paris_z71f:{template:"TIME<br>DATE<br>SUN", date_format:"Nous sommes le dayname dnum monthname year, week", sun_format:"Lever du soleil: srhour:srminute Coucher du soleil: sshour:ssminute<br>Durée du jour: dlhoursh dlminutesmin", coords:"48.8534100,2.3488000"}});
+</script>
