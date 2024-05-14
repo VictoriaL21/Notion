@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
+    .fill {
+      width: 101px;
+      height: 101px;
+      padding: 2%;
+      color: #fff;
+      outline: 0;
+      border: 2px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color:  rgba(0, 0, 0, 0);
+      margin: 5px;
+    }
+
+    .fill::after {
+      content: "";
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 5px;
+      left: 5px;
+      transition: 0.2s;
+    }
+
+    .fill:hover::after {
+      top: 0px;
+      left: 0px;
+    }
+
+
+    .icon {
+      font-size: 2em;
+    }
+
+    .youtube:hover,
+    .youtube::after {
+      background-color: #ff0000;
+    }
+
+    .twitch:hover,
+    .twitch::after {
+      background-color: #bf83c1;
+    }
+
+    .netflix:hover,
+    .netflix::after {
+      background-color: #e50914;
+    }
+
+    .primevideo:hover,
+    .primevideo::after {
+      background: #1a98fe;
+    }
+
+    .canal:hover,
+    .canal::after {
+      background-color: #0e0e0e;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+
+    <div class="wrapper">
+      
+      <!-- Start youtube Icon -->
+      <div id="youtube" onclick="navigate(this.id)" class="fill email">
+        <span class="icon email"><i class="fa-brands fa-youtube"></i></span>
+      </div>
+      <!-- End youtube Icon -->
+
+      
+      <!-- Start twitch Icon -->
+      <div id="twitch" onclick="navigate(this.id)" class="fill  blog">
+        <span class="icon"><i class="fa-brands fa-twitch"></i></span>
+      </div>
+      <!-- End twitch Icon -->
+
+
+      <!-- Start netflix Icon -->
+      <div id="netflix" onclick="navigate(this.id)" class="fill facebook">
+        <span class="icon"><i class="fa-solid fa-n"></i></span>
+      </div>
+      <!-- End netflix Icon -->
+
+
+      <!-- Start primevide Icon -->
+      <div id="primevideo" onclick="navigate(this.id)" class="fill instagram">
+        <span class="icon"><i class="fa-solid fa-play"></i></span>
+      </div>
+      <!-- End primevide Icon -->
+
+
+      <!-- Start canal Icon -->
+      <div id="canal" onclick="navigate(this.id)" class="fill linkedin">
+        <span class="icon"><i class="fa-solid fa-plus"></i></span>
+      </div>
+      <!-- End canal Icon -->
+
+
+
+    </div>
+
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "youtube")
+          window.open("https://www.youtube.com/", '_blank').focus(); //Add the url to your blog
+
+        else if (id === "twitch") {
+          window.open("https://www.twitch.tv/", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "netflix") {
+          window.open("https://www.netflix.com/browse", '_blank').focus(); //Add the url to your facebook page or account
+        }
+        else if (id === "primevideo") {
+          window.open("https://www.primevideo.com/", '_blank').focus(); //Add the url to your instagram account
+        }
+        else if (id === "canal") {
+          window.open("https://www.canalplus.com/", '_blank').focus(); //Add the url to your pinterest account
+        }
+
+      }
+
+    </script>
+
+
+
+  </body>
+
+</html>
