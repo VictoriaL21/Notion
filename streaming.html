@@ -32,15 +32,15 @@
     }
 
     .fill {
-      width: 50px;
-      height: 50px;
+      width: 101px;
+      height: 101px;
       padding: 2%;
       color: #fff;
       outline: 0;
       border: 2px solid black;
       cursor: pointer;
       position: relative;
-      background-color: rgba(0, 0, 0, 0);
+      background-color:  rgba(0, 0, 0, 0);
       margin: 5px;
     }
 
@@ -62,75 +62,35 @@
 
 
     .icon {
-      font-size: 1em;
-    }
-
-    .blog:hover,
-    .blog::after {
-      background-color: #ffbd2f;
-    }
-
-    .email:hover,
-    .email::after {
-      background-color: #23c8c8;
-    }
-
-    .facebook:hover,
-    .facebook::after {
-      background-color: #4267B2;
-    }
-
-    .instagram:hover,
-    .instagram::after {
-      background: #f86ee1;
-    }
-
-    .linkedin:hover,
-    .linkedin::after {
-      background-color: #0e76a8;
-    }
-
-    .twitter:hover,
-    .twitter::after {
-      background-color: #26a7de;
-    }
-
-    .reddit:hover,
-    .reddit::after {
-      background-color: #ff4500;
-    }
-
-    .tiktok:hover,
-    .tiktok::after {
-      background-color: #ff0050;
+      font-size: 2em;
     }
 
     .youtube:hover,
     .youtube::after {
-      background-color: #FF0000;
+      background-color: #ff0000;
     }
 
-    .pinterest:hover,
-    .pinterest::after {
-      background-color: #c8232c;
+    .twitch:hover,
+    .twitch::after {
+      background-color: #bf83c1;
     }
 
-    .telegram:hover,
-    .telegram::after {
-      background-color: #2AABEE;
+    .netflix:hover,
+    .netflix::after {
+      background-color: #e50914;
     }
 
-    .social {
-      position: relative;
-      margin: 10px;
-      cursor: pointer;
+    .primevideo:hover,
+    .primevideo::after {
+      background: #1a98fe;
     }
 
-    .social:hover {
-      color: #fff;
+    .canal:hover,
+    .canal::after {
+      background-color: #0e0e0e;
     }
+
   </style>
-
 
 </head>
 
@@ -141,35 +101,35 @@
     <div class="wrapper">
       
       <!-- Start youtube Icon -->
-      <div id="youtube" onclick="navigate(this.id)" class="fill email">
+      <div id="youtube" onclick="navigate(this.id)" class="fill youtube">
         <span class="icon email"><i class="fa-brands fa-youtube"></i></span>
       </div>
       <!-- End youtube Icon -->
 
       
       <!-- Start twitch Icon -->
-      <div id="twitch" onclick="navigate(this.id)" class="fill  blog">
+      <div id="twitch" onclick="navigate(this.id)" class="fill  twitch">
         <span class="icon"><i class="fa-brands fa-twitch"></i></span>
       </div>
       <!-- End twitch Icon -->
 
 
       <!-- Start netflix Icon -->
-      <div id="netflix" onclick="navigate(this.id)" class="fill facebook">
+      <div id="netflix" onclick="navigate(this.id)" class="fill netflix">
         <span class="icon"><i class="fa-solid fa-n"></i></span>
       </div>
       <!-- End netflix Icon -->
 
 
       <!-- Start primevide Icon -->
-      <div id="primevideo" onclick="navigate(this.id)" class="fill instagram">
+      <div id="primevideo" onclick="navigate(this.id)" class="fill primevideo">
         <span class="icon"><i class="fa-solid fa-play"></i></span>
       </div>
       <!-- End primevide Icon -->
 
 
       <!-- Start canal Icon -->
-      <div id="canal" onclick="navigate(this.id)" class="fill linkedin">
+      <div id="canal" onclick="navigate(this.id)" class="fill canal">
         <span class="icon"><i class="fa-solid fa-plus"></i></span>
       </div>
       <!-- End canal Icon -->
