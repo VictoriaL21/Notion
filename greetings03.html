@@ -24,7 +24,7 @@
             flex-direction: column;
             max-width: 95%;
             margin: auto;
-            border: 3px solid #35459b;
+            border: 0px solid #35459b;
             border-radius: 5px;
             box-shadow: 2px 2px 1px 0px #35459b;
 
@@ -71,19 +71,7 @@
 <div class="container>">
     <div class="widget">
 
-            <div class="greet" id="greet"></div>
-
-                <div class="date" id="date"></div>
-                <div class="clock">
-                    <div class="time" id="hour"></div>
-                    <div class="colon">:</div>
-                    <div class="time" id="min"></div>
-                    <div class="colon">:</div>
-                    <div class="time" id="sec"></div>
-                </div>
-           
-
-        
+            <div class="date" id="date"></div>
 
     </div>
 </div>
@@ -109,7 +97,7 @@ function dispalyGreetings(today){
     function dispalyDate(today) {  
        
         const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-        const monthNames = ["Janvier", "février", "marsr", "avrilr", "mair", "juin",
+        const monthNames = ["Janvier", "février", "mars", "avril", "mai", "juin",
    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
 ];
 
@@ -117,7 +105,7 @@ function dispalyGreetings(today){
         var monthName = monthNames[today.getMonth()];
         var date = today.getDate();
         var year = today.getFullYear();
-        document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
+        document.getElementById('date').innerHTML =dayName+" "+date+" "+monthName+" "+year;
 
     }
 
