@@ -67,7 +67,11 @@
 
 <div class="container>">
     <div class="widget">
+            <div>" "</div>
             <div class="greet" id="greet"></div>
+
+                <div class="date" id="date"></div>
+            <div>" "</div>
     </div>
 </div>
         
@@ -127,9 +131,7 @@ function dispalyGreetings(today){
 
     function dispalyWidget() {
         var today = new Date();
-        dispalyGreetings(today);
         dispalyDate(today);
-        dispalyClock(today);
         setTimeout(dispalyWidget, 500);
     }
 
