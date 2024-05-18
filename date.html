@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+
+    <style>
+
+
+        body{
+            font-family: "Varela Round", sans-serif;
+
+
+        }
+
+        .widget {
+            padding: 5px 5px ;
+            color: #d3a2d7;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            max-width: 95%;
+            margin: auto;
+            border: 0px solid #f1d9f3;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 0px #d3a2d7;
+
+        }
+
+           
+        .greet{
+            font-size: 3em;
+        }
+
+        .date {
+      
+            font-family: "Varela Round", sans-serif;
+            font-size: 2em;
+        }
+
+        .clock {
+            font-family: "Varela Round", sans-serif;
+            font-size: 2em;
+        }
+
+        .time {
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        .colon {
+            font-size: 1em;
+            display: inline-block;
+        }
+
+     
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="container>">
+    <div class="widget">
+            <div class="date" id="date"></div>
+    </div>
+</div>
+        
+
+
+
+<script>
+
+function dispalyGreetings(today){
+        hrs = today.getHours();
+        name=""
+        if (hrs < 12)
+            greet = 'Bonjour  '+name;
+        else if (hrs >= 12 && hrs <= 17)
+            greet = 'Bonne Après-Midi '+name;
+        else if (hrs >= 17 && hrs <= 24)
+            greet = 'Bonsoir  '+name;
+        document.getElementById('greet').innerHTML = greet;
+
+    }
+
+    function dispalyDate(today) {  
+       
+        const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+        const monthNames = ["Janvier", "février", "mars", "avril", "mai", "juin",
+   "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+];
+
+        var dayName = days[today.getDay()];
+        var monthName = monthNames[today.getMonth()];
+        var date = today.getDate();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML =dayName+" "+date+" "+monthName+" "+year;
+
+    }
+
+
+    function dispalyClock(today) {
+
+        var hour = padZeros(today.getHours());
+        var minutes = padZeros(today.getMinutes());
+        var seconds = padZeros(today.getSeconds());
+       
+       
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+    }
+
+
+    function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+        dispalyClock(today);
+        setTimeout(dispalyWidget, 500);
+    }
+
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
